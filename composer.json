@@ -1,0 +1,14 @@
+{
+    "name": "fresh-advance/oxid-event-debugger",
+    "description": "Event debugger module for OXID eShop 6.2+",
+    "type": "oxideshop-module",
+    "keywords": ["oxid", "modules", "eShop", "debug"],
+    "require": {
+        "php": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "FreshAdvance\\OxidEventDebugger\\": "../../../source/modules/fa/oxid-event-debugger"
+        }
+    }
+}

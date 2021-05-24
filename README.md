@@ -1,2 +1,6 @@
-# oxid-event-debugger
-Events debugger for OXID eSales 6.2+
+# OXID eShop event debugger
+
+Hooks on the eShop and logs all triggered events to events.log file.
+
+Requirements:
+* OXID eShop 6.2+
