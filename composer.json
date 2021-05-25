@@ -4,11 +4,16 @@
     "type": "oxideshop-module",
     "keywords": ["oxid", "modules", "eShop", "debug"],
     "require": {
-        "php": "^7.3"
+        "php": "^7.3|^8.0"
     },
     "autoload": {
         "psr-4": {
-            "FreshAdvance\\OxidEventDebugger\\": "../../../source/modules/fa/oxid-event-debugger"
+            "FreshAdvance\\OxidEventDebugger\\": "../../../source/modules/fa/oxid-event-debugger/Source/"
+        }
+    },
+    "extra": {
+        "oxideshop": {
+            "target-directory": "fa/oxid-event-debugger"
         }
     }
 }
