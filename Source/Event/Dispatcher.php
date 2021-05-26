@@ -18,11 +18,12 @@ class Dispatcher extends ShopAwareEventDispatcher
 
     public function dispatch($eventName, Event $event = null)
     {
-        $backtrace = debug_backtrace();
+        ob_start();
+        debug_print_backtrace();
+        $backtrace = preg_replace("@^#@msi", "        #", ob_get_clean());
 
         $this->logger->debug(
-            sprintf('Event triggered - %s', $eventName),
-            ['backtrace' => $backtrace]
+            sprintf("\n    %s\n%s", $eventName, $backtrace)
         );
 
         parent::dispatch($eventName, $event);
